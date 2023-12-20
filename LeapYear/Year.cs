@@ -9,8 +9,17 @@
         /// <returns>True if a specified <paramref name="year"/> is a leap year; otherwise false.</returns>
         public static bool IsLeapYear(int year)
         {
-            // TODO Analyze the method unit tests and add the method implementation.
-            throw new NotImplementedException();
+            if (year % 100 != 0 && year % 4 == 0)
+            {
+                return true;
+            }
+
+            if (year % 100 == 0 && year % 400 == 0)
+            {
+                return true;
+            }
+
+            return false;
         }
     }
 }
